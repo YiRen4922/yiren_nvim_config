@@ -7,6 +7,7 @@ return {
   },
   config = function()
     require("nvim-tree").setup {}
+    vim.keymap.set("n", "<leader>ex", ":NvimTreeToggle<CR>", {})
     vim.api.nvim_create_user_command('Ex', function() vim.cmd.NvimTreeToggle() end, {})
   end,
 
